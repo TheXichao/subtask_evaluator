@@ -1,0 +1,2540 @@
+{
+ "Motor_STAGE_0_1": {
+  "has_meta": false,
+  "top_level": [
+   "ModeEnum.HUMAN"
+  ]
+ },
+ "Motor_STAGE_0_1_lerobot_v21_joint_smoke": {
+  "has_meta": true,
+  "codebase_version": "v2.1",
+  "total_episodes": 1,
+  "total_frames": 1072,
+  "fps": 30,
+  "splits": {
+   "train": "0:1"
+  },
+  "video_keys": [
+   "observation.images.cam_high",
+   "observation.images.cam_left_wrist",
+   "observation.images.cam_right_wrist"
+  ],
+  "total_hours": 0.01
+ },
+ "Motor_STAGE_0_1_lerobot_v21_smoke": {
+  "has_meta": true,
+  "codebase_version": "v2.1",
+  "total_episodes": 2,
+  "total_frames": 2205,
+  "fps": 30,
+  "splits": {
+   "train": "0:2"
+  },
+  "video_keys": [
+   "observation.images.cam_left_high",
+   "observation.images.cam_left_wrist",
+   "observation.images.cam_right_wrist"
+  ],
+  "total_hours": 0.02
+ },
+ "TEST-clear_plates": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1034,
+  "total_frames": 661692,
+  "fps": 30,
+  "splits": {
+   "train": "0:1034"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 6.13,
+  "downsample_selected": 100,
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783492138.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 499,
+  "motion_description_lines": 8,
+  "annotations_records": 8
+ },
+ "clear_plates": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1034,
+  "total_frames": 661692,
+  "fps": 30,
+  "splits": {
+   "train": "0:1034"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 6.13,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Place the plates on the rack from right to left in the order of red, green, and blue."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 491,
+   "mean": 4.91,
+   "min": 1,
+   "max": 9
+  },
+  "subtask_duration_sec": {
+   "mean": 4.4,
+   "median": 4.0,
+   "min": 0.1,
+   "max": 16.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783492138.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_accuracy_by_episode.csv",
+   "subtask_accuracy_detail.json",
+   "subtask_accuracy_summary.json",
+   "subtask_llm_judge_cache.jsonl",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 499,
+  "motion_description_lines": 491,
+  "annotations_records": 491,
+  "accuracy": {
+   "episodes": 100,
+   "model_steps_total": 499,
+   "human_steps_total": 491,
+   "mean_time_segmentation_accuracy_iou": 0.8730119957384663,
+   "mean_subtask_content_accuracy_similarity": 0.8006507936507937,
+   "step_count_match_rate": 0.87
+  }
+ },
+ "collect_eggs": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 199,
+  "total_frames": 93075,
+  "fps": 30,
+  "splits": {
+   "train": "0:199"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 0.86,
+  "downsample_selected": 53,
+  "memory_episodes": 51,
+  "goals": [
+   "Collect the eggs and place them into the tray."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 261,
+   "mean": 5.12,
+   "min": 4,
+   "max": 9
+  },
+  "subtask_duration_sec": {
+   "mean": 3.02,
+   "median": 3.0,
+   "min": 0.1,
+   "max": 12.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_failed_episodes.json",
+   "open_vocab_subtasks.before_normalize_1783503474.jsonl",
+   "open_vocab_subtasks.before_normalize_1783518303.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "selected_failed_13_99_145.tsv",
+   "subtask_accuracy_by_episode.csv",
+   "subtask_accuracy_detail.json",
+   "subtask_accuracy_summary.json",
+   "subtask_llm_judge_cache.jsonl",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 265,
+  "motion_description_lines": 261,
+  "annotations_records": 261,
+  "accuracy": {
+   "episodes": 51,
+   "model_steps_total": 265,
+   "human_steps_total": 261,
+   "mean_time_segmentation_accuracy_iou": 0.8246109554933084,
+   "mean_subtask_content_accuracy_similarity": 0.8658496732026143,
+   "step_count_match_rate": 0.8235294117647058
+  }
+ },
+ "collect_eggs_0508": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 801,
+  "total_frames": 381930,
+  "fps": 30,
+  "splits": {
+   "train": "0:801"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 3.54,
+  "downsample_selected": 148,
+  "memory_episodes": 148,
+  "goals": [
+   "Collect the eggs and place them into the tray."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 794,
+   "mean": 5.36,
+   "min": 1,
+   "max": 9
+  },
+  "subtask_duration_sec": {
+   "mean": 2.98,
+   "median": 3.0,
+   "min": 0.5,
+   "max": 16.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783506766.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 771,
+  "motion_description_lines": 792,
+  "annotations_records": 794
+ },
+ "color_arrangement": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1802,
+  "total_frames": 772371,
+  "fps": 30,
+  "splits": {
+   "train": "0:1802"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 7.15,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Arrange the blocks from right to left in the order: red, green, yellow."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 315,
+   "mean": 3.15,
+   "min": 2,
+   "max": 6
+  },
+  "subtask_duration_sec": {
+   "mean": 4.43,
+   "median": 4.0,
+   "min": 1.0,
+   "max": 11.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_failed_episodes.json",
+   "open_vocab_subtasks.before_normalize_1783517364.jsonl",
+   "open_vocab_subtasks.before_normalize_1783574924.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "selected_failed_25.tsv",
+   "subtask_accuracy_by_episode.csv",
+   "subtask_accuracy_detail.json",
+   "subtask_accuracy_summary.json",
+   "subtask_llm_judge_cache.jsonl",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 315,
+  "motion_description_lines": 315,
+  "annotations_records": 315,
+  "accuracy": {
+   "episodes": 100,
+   "model_steps_total": 315,
+   "human_steps_total": 315,
+   "mean_time_segmentation_accuracy_iou": 0.9826985028860029,
+   "mean_subtask_content_accuracy_similarity": 0.823,
+   "step_count_match_rate": 0.98
+  }
+ },
+ "disconnect_ethernet": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1008,
+  "total_frames": 321752,
+  "fps": 30,
+  "splits": {
+   "train": "0:1008"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 2.98,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Unplug the Ethernet cable from the network port."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 400,
+   "mean": 4,
+   "min": 4,
+   "max": 4
+  },
+  "subtask_duration_sec": {
+   "mean": 2.93,
+   "median": 3.0,
+   "min": 1.0,
+   "max": 11.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_failed_episodes.json",
+   "open_vocab_subtasks.before_normalize_1783504311.jsonl",
+   "open_vocab_subtasks.before_normalize_1783518101.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "selected_failed_283_344_518.tsv",
+   "subtask_accuracy_by_episode.csv",
+   "subtask_accuracy_detail.json",
+   "subtask_accuracy_summary.json",
+   "subtask_llm_judge_cache.jsonl",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 386,
+  "motion_description_lines": 400,
+  "annotations_records": 400,
+  "accuracy": {
+   "episodes": 100,
+   "model_steps_total": 386,
+   "human_steps_total": 400,
+   "mean_time_segmentation_accuracy_iou": 0.8844667748917749,
+   "mean_subtask_content_accuracy_similarity": 0.204,
+   "step_count_match_rate": 0.82
+  }
+ },
+ "fold_towel": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1015,
+  "total_frames": 801859,
+  "fps": 30,
+  "splits": {
+   "train": "0:1015"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 7.42,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Fold the towel neatly and place it aside."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 493,
+   "mean": 4.93,
+   "min": 1,
+   "max": 8
+  },
+  "subtask_duration_sec": {
+   "mean": 5.62,
+   "median": 5.0,
+   "min": 1.0,
+   "max": 39.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783511957.jsonl",
+   "open_vocab_subtasks.before_normalize_1783579631.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "selected_failed_141_195_455_534_770_931.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 509,
+  "motion_description_lines": 493,
+  "annotations_records": 493
+ },
+ "fruit_basket_collection": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1005,
+  "total_frames": 328041,
+  "fps": 30,
+  "splits": {
+   "train": "0:1005"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 3.04,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Put all the fruits into the fruit basket."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 556,
+   "mean": 5.5,
+   "min": 3,
+   "max": 8
+  },
+  "subtask_duration_sec": {
+   "mean": 2.02,
+   "median": 2.0,
+   "min": 0.0,
+   "max": 7.0
+  },
+  "mdp_files": [
+   ".agents",
+   ".annotations_refresh.lock",
+   ".git",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783521667.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "open_vocab_subtasks_results_normalized_for_review.json.corrupt_before_recovery_20260710_160234",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 533,
+  "motion_description_lines": 554,
+  "annotations_records": 556
+ },
+ "hang_the_cup": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 999,
+  "total_frames": 186908,
+  "fps": 30,
+  "splits": {
+   "train": "0:999"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 1.73,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Hang the cup on the marked spot on the cup rack."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 229,
+   "mean": 2.29,
+   "min": 2,
+   "max": 4
+  },
+  "subtask_duration_sec": {
+   "mean": 2.7,
+   "median": 3.0,
+   "min": 0.59,
+   "max": 10.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotation_by_episode.json.bak_wrong_20260731_101912",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783532165.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 221,
+  "motion_description_lines": 229,
+  "annotations_records": 229
+ },
+ "open_pill_bottle": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 991,
+  "total_frames": 667656,
+  "fps": 30,
+  "splits": {
+   "train": "0:991"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 6.18,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Unscrew the bottle cap and pour the medicine from the bottle into the container."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 504,
+   "mean": 5.04,
+   "min": 4,
+   "max": 7
+  },
+  "subtask_duration_sec": {
+   "mean": 4.68,
+   "median": 3.0,
+   "min": 0.1,
+   "max": 34.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783547937.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 532,
+  "motion_description_lines": 504,
+  "annotations_records": 504
+ },
+ "organize_bookshelf": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1003,
+  "total_frames": 326115,
+  "fps": 30,
+  "splits": {
+   "train": "0:1003"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 3.02,
+  "downsample_selected": 101,
+  "memory_episodes": 100,
+  "goals": [
+   "Put the top book onto the bookshelf."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 263,
+   "mean": 2.63,
+   "min": 1,
+   "max": 5
+  },
+  "subtask_duration_sec": {
+   "mean": 4.33,
+   "median": 3.0,
+   "min": 0.1,
+   "max": 25.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_failed_episodes.json",
+   "open_vocab_subtasks.before_normalize_1783540699.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 277,
+  "motion_description_lines": 263,
+  "annotations_records": 263
+ },
+ "organize_stationery": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1006,
+  "total_frames": 734321,
+  "fps": 30,
+  "splits": {
+   "train": "0:1006"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 6.8,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Put the stationery into the pencil case."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 653,
+   "mean": 6.47,
+   "min": 5,
+   "max": 9
+  },
+  "subtask_duration_sec": {
+   "mean": 3.81,
+   "median": 4.0,
+   "min": 0.1,
+   "max": 15.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_failed_episodes.json",
+   "open_vocab_subtasks.before_normalize_1783578434.jsonl",
+   "open_vocab_subtasks.before_normalize_1783579334.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 733,
+  "motion_description_lines": 651,
+  "annotations_records": 653
+ },
+ "organize_test_cube": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 997,
+  "total_frames": 581594,
+  "fps": 30,
+  "splits": {
+   "train": "0:997"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 5.39,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Place the test tubes neatly back into the test tube rack."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 381,
+   "mean": 3.81,
+   "min": 3,
+   "max": 8
+  },
+  "subtask_duration_sec": {
+   "mean": 5.29,
+   "median": 5.0,
+   "min": 0.0,
+   "max": 24.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotation_by_episode.json.bak_wrong_20260731_101912",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783528882.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 415,
+  "motion_description_lines": 381,
+  "annotations_records": 381
+ },
+ "organize_tools": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1011,
+  "total_frames": 775816,
+  "fps": 30,
+  "splits": {
+   "train": "0:1011"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 7.18,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Place the tools onto the tool rack from right to left."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 559,
+   "mean": 5.59,
+   "min": 1,
+   "max": 14
+  },
+  "subtask_duration_sec": {
+   "mean": 4.67,
+   "median": 4.0,
+   "min": 0.2,
+   "max": 44.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_failed_episodes.json",
+   "open_vocab_subtasks.before_normalize_1783576500.jsonl",
+   "open_vocab_subtasks.before_normalize_1783577521.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 595,
+  "motion_description_lines": 559,
+  "annotations_records": 559
+ },
+ "pack_bag": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1078,
+  "total_frames": 491298,
+  "fps": 30,
+  "splits": {
+   "train": "0:1078"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 4.55,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Put the pencil case into the backpack and zip it up."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 398,
+   "mean": 3.94,
+   "min": 2,
+   "max": 5
+  },
+  "subtask_duration_sec": {
+   "mean": 4.09,
+   "median": 4.0,
+   "min": 0.0,
+   "max": 16.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   ".noise_reuse_active.json",
+   "annotation_by_episode.json",
+   "annotation_by_episode.json.bak_before_fill_remaining_aug_20260720_112153",
+   "annotation_by_episode.json.bak_before_repair_aug_20260720_104540",
+   "annotations.json",
+   "annotations.json.bak_before_fill_remaining_aug_20260720_112153",
+   "annotations.json.bak_before_repair_aug_20260720_104540",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "missing_augmented_subtasks.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783536236.jsonl",
+   "open_vocab_subtasks.full_before_noise_reuse_1784278611.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks.noise_unique_todo.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "repaired_augmented_subtasks.jsonl",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.before_expand_1784289483.jsonl",
+   "subtask_noise.cache_before_noise_reuse_1784278611.jsonl",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 430,
+  "motion_description_lines": 398,
+  "annotations_records": 398
+ },
+ "pack_iphone": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 995,
+  "total_frames": 880050,
+  "fps": 30,
+  "splits": {
+   "train": "0:995"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 8.15,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Pack the phone into its packaging box."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 594,
+   "mean": 5.94,
+   "min": 3,
+   "max": 11
+  },
+  "subtask_duration_sec": {
+   "mean": 4.88,
+   "median": 5.0,
+   "min": 0.0,
+   "max": 17.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783640648.jsonl",
+   "open_vocab_subtasks.before_normalize_1783655812.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 613,
+  "motion_description_lines": 594,
+  "annotations_records": 594
+ },
+ "pack_the_doll": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 993,
+  "total_frames": 355979,
+  "fps": 30,
+  "splits": {
+   "train": "0:993"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 3.3,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Put the doll into the bag."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 416,
+   "mean": 4.16,
+   "min": 2,
+   "max": 6
+  },
+  "subtask_duration_sec": {
+   "mean": 2.96,
+   "median": 3.0,
+   "min": 1.0,
+   "max": 15.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783575355.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 439,
+  "motion_description_lines": 416,
+  "annotations_records": 416
+ },
+ "paper_cup_stacking": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 998,
+  "total_frames": 425867,
+  "fps": 30,
+  "splits": {
+   "train": "0:998"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 3.94,
+  "downsample_selected": 101,
+  "memory_episodes": 100,
+  "goals": [
+   "Stack the paper cups in front of you with two on the bottom and one on top."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 391,
+   "mean": 3.91,
+   "min": 3,
+   "max": 6
+  },
+  "subtask_duration_sec": {
+   "mean": 3.8,
+   "median": 4.0,
+   "min": 1.0,
+   "max": 11.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotation_by_episode.json.bak_before_delete_episode_000952_20260721_114444",
+   "annotation_by_episode.json.bak_before_model_fill_step5_20260721_113711",
+   "annotations.json",
+   "annotations.json.bak_before_delete_episode_000952_20260721_114444",
+   "annotations.json.bak_before_model_fill_step5_20260721_113711",
+   "benchmark_logs",
+   "deleted_episode_000952_records_20260721_114444.json",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "motion_descriptions.jsonl.bak_fix_step5_sync_20260721_113844",
+   "open_vocab_subtasks.before_normalize_1783649616.jsonl",
+   "open_vocab_subtasks.before_normalize_1783654291.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 403,
+  "motion_description_lines": 395,
+  "annotations_records": 391
+ },
+ "pick_out_battery": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 991,
+  "total_frames": 501414,
+  "fps": 30,
+  "splits": {
+   "train": "0:991"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 4.64,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Pick out the batteries from the blocks and place them into the green box."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 636,
+   "mean": 6.36,
+   "min": 2,
+   "max": 18
+  },
+  "subtask_duration_sec": {
+   "mean": 2.7,
+   "median": 2.0,
+   "min": 0.1,
+   "max": 21.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783606714.jsonl",
+   "open_vocab_subtasks.before_normalize_1783610031.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 725,
+  "motion_description_lines": 634,
+  "annotations_records": 636
+ },
+ "place_photo_frames": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1002,
+  "total_frames": 337507,
+  "fps": 30,
+  "splits": {
+   "train": "0:1002"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 3.13,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Open the photo frame and place it on the table."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 373,
+   "mean": 3.73,
+   "min": 3,
+   "max": 6
+  },
+  "subtask_duration_sec": {
+   "mean": 3.47,
+   "median": 3.0,
+   "min": 1.0,
+   "max": 11.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   ".noise_reuse_active.json",
+   "annotation_by_episode.json",
+   "annotation_by_episode.json.bak_before_fill_remaining_aug_20260720_112153",
+   "annotation_by_episode.json.bak_before_repair_aug_20260720_102542",
+   "annotation_by_episode.json.bak_before_repair_aug_20260720_103815",
+   "annotations.json",
+   "annotations.json.bak_before_fill_remaining_aug_20260720_112153",
+   "annotations.json.bak_before_repair_aug_20260720_102542",
+   "annotations.json.bak_before_repair_aug_20260720_103815",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "missing_augmented_subtasks.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783603911.jsonl",
+   "open_vocab_subtasks.full_before_noise_reuse_1784278598.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks.noise_unique_todo.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_continuity_fix_20260717",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "repaired_augmented_subtasks.jsonl",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.before_expand_1784288896.jsonl",
+   "subtask_noise.cache_before_noise_reuse_1784278598.jsonl",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 387,
+  "motion_description_lines": 373,
+  "annotations_records": 373
+ },
+ "plug_charger": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 993,
+  "total_frames": 454502,
+  "fps": 30,
+  "splits": {
+   "train": "0:993"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 4.21,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Position the power strip properly and plug the plug into the middle socket."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 335,
+   "mean": 3.35,
+   "min": 3,
+   "max": 5
+  },
+  "subtask_duration_sec": {
+   "mean": 4.63,
+   "median": 4.0,
+   "min": 1.0,
+   "max": 16.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783592177.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_continuity_fix_20260717",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 343,
+  "motion_description_lines": 335,
+  "annotations_records": 335
+ },
+ "plug_in_ethernet": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1003,
+  "total_frames": 519555,
+  "fps": 30,
+  "splits": {
+   "train": "0:1003"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 4.81,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Plug the Ethernet cable into the network port."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 434,
+   "mean": 4.34,
+   "min": 2,
+   "max": 7
+  },
+  "subtask_duration_sec": {
+   "mean": 3.87,
+   "median": 3.0,
+   "min": 0.1,
+   "max": 20.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783615752.jsonl",
+   "open_vocab_subtasks.before_normalize_1783654292.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_claude_exchange_fix_20260729",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "updated.json",
+   "updated.json.bak_before_websave",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 438,
+  "motion_description_lines": 434,
+  "annotations_records": 434
+ },
+ "remove_pinned_note": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1000,
+  "total_frames": 589588,
+  "fps": 30,
+  "splits": {
+   "train": "0:1000"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 5.46,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Remove the note that is pinned to the board with push pins."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 596,
+   "mean": 5.96,
+   "min": 4,
+   "max": 9
+  },
+  "subtask_duration_sec": {
+   "mean": 3.39,
+   "median": 3.0,
+   "min": 0.0,
+   "max": 11.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783641729.jsonl",
+   "open_vocab_subtasks.before_normalize_1783654293.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 600,
+  "motion_description_lines": 592,
+  "annotations_records": 596
+ },
+ "sort_food_conveyor": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1001,
+  "total_frames": 372717,
+  "fps": 30,
+  "splits": {
+   "train": "0:1001"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 3.45,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Pick up the food items moving on the conveyor belt and sort them onto the rack on the right by category."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 297,
+   "mean": 2.94,
+   "min": 2,
+   "max": 4
+  },
+  "subtask_duration_sec": {
+   "mean": 4.36,
+   "median": 4.0,
+   "min": 1.0,
+   "max": 12.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotation_by_episode.json.bak_before_fill_empty_motion_20260720_144842",
+   "annotations.json",
+   "annotations.json.bak_before_fill_empty_motion_20260720_144843",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783612357.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 304,
+  "motion_description_lines": 295,
+  "annotations_records": 297
+ },
+ "sort_fruit": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1002,
+  "total_frames": 323211,
+  "fps": 30,
+  "splits": {
+   "train": "0:1002"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 2.99,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Place each fruit onto the plate with the matching color."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 492,
+   "mean": 4.92,
+   "min": 2,
+   "max": 8
+  },
+  "subtask_duration_sec": {
+   "mean": 2.36,
+   "median": 2.0,
+   "min": 0.0,
+   "max": 21.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "__pycache__",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783645260.jsonl",
+   "open_vocab_subtasks.before_normalize_1783654293.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_continuity_fix_20260717",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 494,
+  "motion_description_lines": 492,
+  "annotations_records": 492
+ },
+ "spell_Unitree": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1005,
+  "total_frames": 952934,
+  "fps": 30,
+  "splits": {
+   "train": "0:1005"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 8.82,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Arrange the letter blocks to spell \"robot\"."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 401,
+   "mean": 4.01,
+   "min": 4,
+   "max": 5
+  },
+  "subtask_duration_sec": {
+   "mean": 8.09,
+   "median": 8.0,
+   "min": 3.0,
+   "max": 24.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "check_review_subtasks_report.txt",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "manual_fallback_ok_unparsed_report.json",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1784189754.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_ro_bot_fix_20260720",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_style_time_fix_20260718",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 555,
+  "motion_description_lines": 401,
+  "annotations_records": 401
+ },
+ "stack_bowls_three": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 972,
+  "total_frames": 295489,
+  "fps": 30,
+  "splits": {
+   "train": "0:972"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 2.74,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Stack the three bowls in the order: red, green, blue."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 336,
+   "mean": 3.33,
+   "min": 1,
+   "max": 6
+  },
+  "subtask_duration_sec": {
+   "mean": 3.2,
+   "median": 3.0,
+   "min": 1.0,
+   "max": 10.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783690770.jsonl",
+   "open_vocab_subtasks.before_normalize_1783747672.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 335,
+  "motion_description_lines": 336,
+  "annotations_records": 336
+ },
+ "stack_cups": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 986,
+  "total_frames": 594877,
+  "fps": 30,
+  "splits": {
+   "train": "0:986"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 5.51,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Place the paper cups on the table into the cup rack one by one."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 500,
+   "mean": 4.95,
+   "min": 3,
+   "max": 9
+  },
+  "subtask_duration_sec": {
+   "mean": 4.06,
+   "median": 4.0,
+   "min": 1.0,
+   "max": 15.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783683832.jsonl",
+   "open_vocab_subtasks.before_normalize_1783747673.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 505,
+  "motion_description_lines": 500,
+  "annotations_records": 500
+ },
+ "store_earphones": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 988,
+  "total_frames": 753971,
+  "fps": 30,
+  "splits": {
+   "train": "0:988"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 6.98,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Place the earphones into the charging case and put the case into the storage box."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 682,
+   "mean": 6.75,
+   "min": 4,
+   "max": 10
+  },
+  "subtask_duration_sec": {
+   "mean": 4.04,
+   "median": 4.0,
+   "min": 1.0,
+   "max": 17.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783687097.jsonl",
+   "open_vocab_subtasks.before_normalize_1783747674.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 690,
+  "motion_description_lines": 678,
+  "annotations_records": 682
+ },
+ "store_racket": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 999,
+  "total_frames": 1049516,
+  "fps": 30,
+  "splits": {
+   "train": "0:999"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 9.72,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Put the table tennis paddle into its case and zip it up."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 504,
+   "mean": 5.04,
+   "min": 3,
+   "max": 9
+  },
+  "subtask_duration_sec": {
+   "mean": 6.9,
+   "median": 6.0,
+   "min": 1.0,
+   "max": 27.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotation_by_episode.json.bak_wrong_20260731_101912",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783720431.jsonl",
+   "open_vocab_subtasks.before_normalize_1783747675.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 539,
+  "motion_description_lines": 502,
+  "annotations_records": 504
+ },
+ "toolbox_storage": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1001,
+  "total_frames": 408539,
+  "fps": 30,
+  "splits": {
+   "train": "0:1001"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 3.78,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Store all the tools in the toolbox."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 346,
+   "mean": 3.43,
+   "min": 2,
+   "max": 6
+  },
+  "subtask_duration_sec": {
+   "mean": 4.11,
+   "median": 3.5,
+   "min": 1.0,
+   "max": 13.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "check_review_subtasks_report.txt",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "manual_fallback_ok_unparsed_report.json",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1784189755.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 433,
+  "motion_description_lines": 346,
+  "annotations_records": 346
+ },
+ "toolbox_storage_hard": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 762,
+  "total_frames": 882525,
+  "fps": 30,
+  "splits": {
+   "train": "0:762"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 8.17,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Store all the tools in the toolbox."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 643,
+   "mean": 6.37,
+   "min": 1,
+   "max": 11
+  },
+  "subtask_duration_sec": {
+   "mean": 6.03,
+   "median": 5.0,
+   "min": 2.0,
+   "max": 27.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783720756.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 905,
+  "motion_description_lines": 643,
+  "annotations_records": 643
+ },
+ "unlock": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1006,
+  "total_frames": 439200,
+  "fps": 30,
+  "splits": {
+   "train": "0:1006"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 4.07,
+  "downsample_selected": 101,
+  "memory_episodes": 101,
+  "goals": [
+   "Unlock the lock using the key."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 516,
+   "mean": 5.11,
+   "min": 5,
+   "max": 8
+  },
+  "subtask_duration_sec": {
+   "mean": 3.17,
+   "median": 3.0,
+   "min": 1.0,
+   "max": 14.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1783707907.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_episode551_handfix_20260728_194959_296582",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_remaining13_to5_20260728_200415_491547",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_time_integrity_fix_20260728_212808_087255",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 552,
+  "motion_description_lines": 516,
+  "annotations_records": 516
+ },
+ "water_plant": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1006,
+  "total_frames": 523955,
+  "fps": 30,
+  "splits": {
+   "train": "0:1006"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 4.85,
+  "downsample_selected": 201,
+  "memory_episodes": 201,
+  "goals": [
+   "Water the potted plant on the table."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 678,
+   "mean": 3.37,
+   "min": 3,
+   "max": 5
+  },
+  "subtask_duration_sec": {
+   "mean": 5.04,
+   "median": 5.0,
+   "min": 1.0,
+   "max": 15.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1785316353.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results.json.bak_20260729_170605",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.strict_timeline_report.json",
+   "open_vocab_subtasks_results_normalized_for_review.strict.json.strict_timeline_report.json",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz",
+   "water_plant_viewer_flat_rows.json"
+  ],
+  "open_vocab_subtask_lines": 678,
+  "motion_description_lines": 678,
+  "annotations_records": 678
+ },
+ "zip_up": {
+  "has_meta": true,
+  "codebase_version": "v3.0",
+  "total_episodes": 1001,
+  "total_frames": 443198,
+  "fps": 30,
+  "splits": {
+   "train": "0:1001"
+  },
+  "video_keys": [
+   "observation.images.head_stereo_left",
+   "observation.images.head_stereo_right",
+   "observation.images.wrist_left",
+   "observation.images.wrist_right",
+   "observation.images.wrist_left_ir",
+   "observation.images.wrist_right_ir",
+   "observation.images.head_stereo_left_rec",
+   "observation.images.head_stereo_right_rec"
+  ],
+  "total_hours": 4.1,
+  "downsample_selected": 100,
+  "memory_episodes": 100,
+  "goals": [
+   "Straighten the storage pouch and zip it up."
+  ],
+  "memory_video_fps": [
+   2.0
+  ],
+  "steps_per_episode": {
+   "total": 341,
+   "mean": 3.41,
+   "min": 2,
+   "max": 5
+  },
+  "subtask_duration_sec": {
+   "mean": 4.33,
+   "median": 4.0,
+   "min": 1.0,
+   "max": 31.0
+  },
+  "mdp_files": [
+   ".annotations_refresh.lock",
+   "annotation_by_episode.json",
+   "annotations.json",
+   "benchmark_logs",
+   "check_review_subtasks_report.txt",
+   "external_open_vocab_retry",
+   "frames_4",
+   "manifests",
+   "manual_fallback_ok_unparsed_report.json",
+   "merged_records.json",
+   "motion_descriptions.jsonl",
+   "open_vocab_subtasks.before_normalize_1784189756.jsonl",
+   "open_vocab_subtasks.jsonl",
+   "open_vocab_subtasks_results.json",
+   "open_vocab_subtasks_results_normalized_for_review.json",
+   "open_vocab_subtasks_results_normalized_for_review.json.bak_before_websave",
+   "parallel_logs",
+   "segments_1hz",
+   "selected_episodes.tsv",
+   "subtask_noise.jsonl",
+   "subtask_normalization_map.json",
+   "summary.json",
+   "summary_videos_2hz.json",
+   "videos_2hz"
+  ],
+  "open_vocab_subtask_lines": 355,
+  "motion_description_lines": 341,
+  "annotations_records": 341
+ },
+ "__global__": {
+  "all_subtask_count": 15808,
+  "duration_mean": 4.14,
+  "duration_median": 4.0,
+  "duration_min": 0.0,
+  "duration_max": 44.0
+ }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "tile_floor",
+  "description": "Hold 5x5 @ 2 fps and sweep tile width 288/224/192 px to bracket the legibility floor: docs/grid_experiments.md (n=1) found 256 px clearly usable and 160 px marginal.",
+  "grids": [
+    {"name": "t288_5x5_2fps", "rows": 5, "columns": 5, "sample_fps": 2.0, "tile_width": 288},
+    {"name": "t224_5x5_2fps", "rows": 5, "columns": 5, "sample_fps": 2.0, "tile_width": 224},
+    {"name": "t192_5x5_2fps", "rows": 5, "columns": 5, "sample_fps": 2.0, "tile_width": 192}
+  ]
+}
