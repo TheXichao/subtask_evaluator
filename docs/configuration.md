@@ -4,7 +4,7 @@ One principle: **one source of truth where consistency matters; local ownership
 where independence matters; explicit overrides where experimentation matters.**
 There is no global settings file; each kind of value has exactly one home.
 
-## The three homes
+## The four homes
 
 ### 1. Shared project/environment paths — `src/subtask_checker/config.py`
 
@@ -71,6 +71,21 @@ Format choice: JSON, because every data contract in this repo is already
 JSON/JSONL parsed by Pydantic (`model_validate_json`), and it needs no new
 dependency (`tomllib` is 3.11+; we support 3.10). Re-evaluate only if config
 files need comments badly.
+
+### 4. Model service roles — `model_services.json`
+
+The inventory of model services around the project, keyed by **role**
+(`subtask_generator`, `reference_judge`, `evaluator`), validated by
+`services.py::ModelServices` (`extra="forbid"`, so an unknown role is an
+error). The JSON file at the repo root is the single source of truth —
+`services.load_model_services()` returns the typed object.
+
+`endpoint` is `null` until a service is actually reachable: the known services
+run as vLLM on the GPU server behind SSH tunnels, so `server_port` is a
+recorded fact about the server, never something to synthesise a URL from.
+`ModelService.require_endpoint()` fails loudly while the placeholder stands.
+Nothing in the data-preparation layer reads this file; it exists for the
+future inference module.
 
 ## Adding configuration for a new component (e.g. training, evaluator)
 

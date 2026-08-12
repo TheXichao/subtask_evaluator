@@ -1,0 +1,21 @@
+{
+  "description": "Model service roles (validated by services.py::ModelServices). Endpoints are placeholders: the known services run as vLLM on the team's GPU server and were reached through SSH tunnels, so 'server_port' records a fact about the server, not a usable URL. Fill 'endpoint' with a reachable OpenAI-compatible base URL once one exists.",
+  "subtask_generator": {
+    "model": "Qwen3.6-27B-sft-merged",
+    "endpoint": null,
+    "server_port": 9020,
+    "notes": "The team's subtasker that generated the pre-review annotations this project judges (Unitree_Robo_Describer STEP 03)."
+  },
+  "reference_judge": {
+    "model": "Qwen3-VL-235B-A22B-Instruct",
+    "endpoint": null,
+    "server_port": 9030,
+    "notes": "Judge used by the previous evaluation project (~/Dev/evaluation); reference only, not part of this pipeline."
+  },
+  "evaluator": {
+    "model": "Qwen3-VL-4B-Instruct",
+    "endpoint": "http://127.0.0.1:9040/v1",
+    "server_port": null,
+    "notes": "Served locally (RTX 4090) via LLaMA-Factory: API_PORT=9040 llamafactory-cli api ~/Dev/LLaMA-Factory/qwen3vl_4b_api.yaml (conda env llama_factory). Later: same endpoint via SSH tunnel to the GPU server. Endpoint is only live while the server runs; smoke-tested 2026-08-12."
+  }
+}
