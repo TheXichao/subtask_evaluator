@@ -19,6 +19,18 @@ from subtask_checker.data.source import SourceSubtaskRow
 END_TIME_TOLERANCE_SEC = 1.0
 
 
+def source_file_server_path(jsonl_path: Path, data_root: Path | None = None) -> str:
+    """Provenance form of a source JSONL path: the server's own absolute path —
+    stable across machines and mount points, same convention as the chunk-video
+    reference. Falls back to the literal path for files outside the data root
+    (e.g. test fixtures)."""
+    root = data_root if data_root is not None else config.PATHS.data_root
+    try:
+        return f"{config.SERVER_DATA_PREFIX}/{jsonl_path.relative_to(root)}"
+    except ValueError:
+        return str(jsonl_path)
+
+
 def to_task_example(
     row: SourceSubtaskRow, source_file: str | Path, row_index: int
 ) -> TaskExample:
@@ -117,12 +129,7 @@ def build_sample(
         if tasks is not None and task not in tasks:
             continue
         report["tasks"] += 1
-        # record provenance in the server's own path form — stable across machines
-        # and mount points, same convention as the chunk-video reference
-        try:
-            source_file = f"{config.SERVER_DATA_PREFIX}/{jsonl.relative_to(root)}"
-        except ValueError:
-            source_file = str(jsonl)
+        source_file = source_file_server_path(jsonl, root)
         for i, row in enumerate(source_mod.load_source_rows(jsonl)):
             report["rows"] += 1
             try:
