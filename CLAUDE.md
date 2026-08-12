@@ -23,6 +23,7 @@ build them unless explicitly asked.
 ```text
 team pre-review subtask JSONL → loader → canonical TaskExample
     → video segment → sampled frames → contact-sheet grid → inspect
+    → official Qwen SFT record (placeholder targets until real labels exist)
 ```
 
 ## Hard rules
@@ -86,6 +87,9 @@ src/subtask_checker/
   data/schema.py   canonical models: TaskExample, Segment, VideoRef, Provenance
   data/prepare.py  source row → TaskExample (the ONE adaptation boundary),
                    validation, deterministic stratified sampling
+  data/episodes.py task → episode → subtask hierarchy: EpisodeSubtasks groups
+                   TaskExamples per episode, validating the verified invariants
+                   (one goal, one video window, unique ascending steps)
   video/frames.py  window computation (±3s pad / full episode, episode-clamped),
                    frame planning (≤12 frames, ≥0.5s interval, badge times
                    rebased to window start), ffmpeg extraction + ffprobe
@@ -93,10 +97,26 @@ src/subtask_checker/
   video/gridset.py configurable density experiments: GridConfig (rows×cols, fps,
                    tile px) → multi-grid plan + GridSetMetrics (token estimates);
                    see docs/grid_experiments.md
+  eval_input.py    EvaluationInput: the data→model input contract (TaskExample +
+                   GridSetPlan + ≥1 grid image refs + instruction). Assembles via
+                   video/gridset — no second grid algorithm, no model calls. The
+                   inference layer is a future SEPARATE module consuming this.
+  services.py      model-service roles (subtask_generator/reference_judge/evaluator)
+                   from model_services.json — endpoints stay null placeholders until
+                   real ones exist (server ports are behind SSH tunnels, not URLs)
+  qwen_export.py   EvaluationInput → Qwen SFT record
+                   ({"image": […], "conversations": [{"from": "human"/"gpt"}]})
+                   + self-contained dataset dir with provenance manifest. One
+                   record format serves BOTH trainers: LLaMA-Factory ShareGPT
+                   (preferred; needs media_dir + image_max_pixels in the YAML)
+                   and official qwen-vl-finetune. Assistant turns need an
+                   explicit QwenTarget with a source tag; PLACEHOLDER_TARGET
+                   until real labels exist (docs/qwen_dataset.md)
 scripts/           thin CLIs only; logic lives in src/
 experiments/       source-controlled experiment override files (JSON)
 tests/             deterministic tests (parsing, validation, mapping, planning, grid)
 docs/dataset.md    verified source schema; distinguishes confirmed/assumed/unresolved
+docs/qwen_dataset.md   verified official Qwen SFT format + export design
 docs/investigation_report.md   full 2026-08-11 background investigation
 ```
 
@@ -104,7 +124,7 @@ Data contracts are Pydantic end to end; no raw dicts across stage boundaries.
 Nothing downstream of `data/prepare.py` may touch the team's field names.
 
 Deliberately absent (add only when a real requirement appears): `labels/`,
-training formatters, model wrappers, caching layers, notebooks. Avoid
+model wrappers, caching layers, notebooks. Avoid
 `BaseModel`/`ModelFactory`/`PipelineManager`-style speculative abstractions
 and a generic `utils.py`.
 
@@ -137,6 +157,8 @@ uv sync                                              # needs ffmpeg on PATH (AV1
 uv run python scripts/build_sample.py --count 20     # deterministic dev sample (seed 42)
 uv run python scripts/prepare_example.py --index 0   # or --example-id <id>
 uv run python scripts/compare_grid_configs.py --index 0 [--scope episode]  # density candidates side by side
+uv run python scripts/prepare_input.py --index 0     # full model input for one example (no model call)
+uv run python scripts/export_qwen_dataset.py --name dev20   # official Qwen SFT dataset (placeholder targets)
 uv run pytest
 ```
 

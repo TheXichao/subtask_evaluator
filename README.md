@@ -19,9 +19,15 @@ Video segment               chunk_time = source_from_timestamp + episode_time
        ↓
 Frames / grid               scripts/prepare_example.py → frames + contact sheet
        ↓
+Evaluation input            scripts/prepare_input.py → EvaluationInput (segment
+       ↓                    metadata + grid image refs + instruction, JSON)
+Qwen SFT dataset            scripts/export_qwen_dataset.py → one record format
+       ↓                    valid for both LLaMA-Factory (ShareGPT) and official
+       ↓                    qwen-vl-finetune (placeholder targets, docs/qwen_dataset.md)
 [future: evaluator]         {criteria, score, evidence, feedback} — not built yet
        ↓
-[future: fine-tuning]       Qwen3-VL-4B via MS-SWIFT / LLaMA-Factory — not built yet
+[future: fine-tuning]       Qwen3-VL-4B via LLaMA-Factory (preferred) or the
+                            official qwen-vl-finetune framework — not built yet
 ```
 
 ## Setup
@@ -61,7 +67,16 @@ uv run python scripts/prepare_example.py --example-id 410_g1_ir/clear_plates/epi
 uv run python scripts/compare_grid_configs.py --index 0 --scope episode
 uv run python scripts/compare_grid_configs.py --index 0 --experiment experiments/tile_floor.json
 
-# 4. Tests
+# 4. Assemble the complete input of one future model evaluation (no model call)
+uv run python scripts/prepare_input.py --index 0
+uv run python scripts/prepare_input.py --index 0 --grid-config b_25f_tile256_2fps --scope episode
+
+# 5. Export examples as an official-format Qwen SFT dataset (input-side,
+#    placeholder targets until real labels exist — see docs/qwen_dataset.md)
+uv run python scripts/export_qwen_dataset.py --name dev20
+uv run python scripts/export_qwen_dataset.py --name cp2 --tasks clear_plates --episodes 2
+
+# 6. Tests
 uv run pytest
 ```
 
@@ -80,15 +95,46 @@ src/subtask_checker/
   data/source.py     the team's JSONL format (their field names stop here)
   data/schema.py     canonical models: TaskExample, Segment, VideoRef, Provenance
   data/prepare.py    source row → TaskExample, deterministic stratified sampling
+  data/episodes.py   task → episode → ordered-subtask hierarchy (EpisodeSubtasks)
   video/frames.py    window computation, frame planning, ffmpeg extraction/probe
   video/grid.py      contact-sheet JPEG with burned-in time badges (Pillow)
   video/gridset.py   configurable grid-density experiments (GridConfig, metrics)
-scripts/             thin CLIs over src/ (+ dataset_stats.py, a read-only stats sweep)
-experiments/         source-controlled experiment definitions (JSON)
-docs/configuration.md          configuration conventions
-docs/dataset.md                the verified source schema and video mapping
-docs/grid_experiments.md       grid-density experiment design + findings
-docs/investigation_report.md   full background investigation (2026-08-11)
+  eval_input.py      EvaluationInput: the validated data→model input contract
+  services.py        model-service roles loaded from model_services.json
+  qwen_export.py     EvaluationInput → official Qwen fine-tuning records + manifest
+
+scripts/             thin CLIs over src/
+  build_sample.py         select the deterministic dev sample
+  prepare_example.py      one subtask → self-contained inspectable example dir
+  compare_grid_configs.py render grid-density candidates side by side
+  prepare_input.py        assemble one complete model input (no model call)
+  export_qwen_dataset.py  write an official-format Qwen SFT dataset
+  dataset_stats.py        read-only stats sweep over the mount → docs/dataset_stats.json
+
+experiments/
+  tile_floor.json    source-controlled experiment definitions (JSON)
+
+model_services.json  model-service roles (subtask_generator / reference_judge /
+                     evaluator); endpoints filled only where a server actually runs
+
+tests/               deterministic tests: source parsing, config, prepare/sampling,
+                     episodes, video planning, gridset, eval input, services,
+                     Qwen export
+
+docs/
+  dataset.md               the verified source schema and video mapping
+  dataset_stats.json       per-task statistics (regenerate via scripts/dataset_stats.py)
+  configuration.md         configuration conventions
+  evaluation_input.md      the model-input contract and how to prepare one
+  grid_experiments.md      grid-density experiment design + findings
+  qwen_dataset.md          verified official Qwen SFT format + export design
+  local_serving.md         serving Qwen3-VL-4B locally (LLaMA-Factory playbook)
+  prompt_log.md            running log of prompts and outcomes
+  investigation_report.md  full background investigation (2026-08-11)
+
+data/                gitignored, regenerable
+  samples/           dev_sample.jsonl, examples/, grid_experiments/
+  qwen_datasets/     exported SFT dataset directories
 ```
 
 Design notes: the team's JSONL is adapted to the canonical model at exactly one
