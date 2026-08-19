@@ -98,4 +98,4 @@ One entry per user prompt: what was asked, what happened. Newest at the bottom.
 ## 2026-08-19 14:45 — WRC LinkedIn outreach sheet
 - asked: draft LinkedIn connection requests for WRC 2026 main-forum speakers (photos of agenda board)
 - done: extracted 14 speakers/panelists from board photos into docs/wrc2026_linkedin_outreach.md with <200-char personalized notes
-- done: web-searched each person's LinkedIn; URLs recorded with confidence notes (batch 2 in progress)
+- done: web-searched each person's LinkedIn; 10 profiles found (with confidence notes), 3 not found (Xu Xiaolan, Jae Hwan Kim, Alimdjanov), 1 low-confidence (Jongsuk Choi)

@@ -17,7 +17,7 @@ Notes on LinkedIn limits:
 ### Ms. Xu Xiaolan (徐晓兰)
 - Talk: *Embodied Intelligence: A New Engine of the Intelligent Economy* (14:00)
 - Role: Standing Committee Member, CPPCC National Committee; President, Chinese Institute of Electronics
-- LinkedIn: _pending_
+- LinkedIn: not found (no profile for the CIE president surfaced — expected for a senior Chinese official; likely skip)
 - Note:
   > Hi Ms. Xu, I'm with Unitree and study electrical engineering at Imperial. I thoroughly enjoyed your talk on embodied intelligence as a new engine of the intelligent economy at WRC today.
 
@@ -69,43 +69,43 @@ Notes on LinkedIn limits:
 
 ### Mr. Gong Ke (龚克) — moderator
 - Role: Former President, World Federation of Engineering Organizations
-- LinkedIn: _pending_
+- LinkedIn: https://www.linkedin.com/in/gong-ke-%E9%BE%9A%E5%85%8B-775836160/ (high confidence — profile shows 龚克 / Nankai University, matching his WFEO past-presidency)
 - Note:
   > Hi Prof. Gong, I'm with Unitree and study electrical engineering at Imperial. I thoroughly enjoyed the Silk Road robotics dialogue you moderated at WRC today.
 
 ### Mr. Farrukh Alimdjanov
 - Role: Industrial Development Officer, UNIDO
-- LinkedIn: _pending_
+- LinkedIn: not found (appears in others' posts and UNIDO event pages, but no personal profile surfaced — try searching inside LinkedIn)
 - Note:
   > Hi Farrukh, I'm with Unitree and study electrical engineering at Imperial. I thoroughly enjoyed your insights in the Silk Road robotics dialogue at WRC today.
 
 ### Mr. Chee Fai Tan
 - Role: President, ASEAN Federation of Smart Industry
-- LinkedIn: _pending_
+- LinkedIn: https://www.linkedin.com/in/cheefaitan/ (high confidence — Prof. Tan Chee-Fai, ASEAN Smart Industry Federation president)
 - Note:
   > Hi Dr. Tan, I'm with Unitree and study electrical engineering at Imperial. I thoroughly enjoyed your insights in the Silk Road robotics dialogue at WRC today.
 
 ### Mr. Mohammad Alshamsi
 - Role: Secretary-General, UAE Society of Robotics and Automation
-- LinkedIn: _pending_
+- LinkedIn: https://www.linkedin.com/in/mohammad-robot/ (medium confidence — RoboHiTec founder identified as RAS-UAE secretary; verify photo before sending)
 - Note:
   > Hi Mr. Alshamsi, I'm with Unitree and study electrical engineering at Imperial. I thoroughly enjoyed your insights in the Silk Road robotics dialogue at WRC today.
 
 ### Mr. Jongsuk Choi
 - Role: President, Korea Robotics Society
-- LinkedIn: _pending_
+- LinkedIn: https://www.linkedin.com/in/jongsuk-choi-aa9585236/ (LOW confidence — top match for the KIST researcher but profile details conflict (Los Angeles location, empty headline); verify carefully or search inside LinkedIn)
 - Note:
   > Hi Prof. Choi, I'm with Unitree and study electrical engineering at Imperial. I thoroughly enjoyed your insights in the Silk Road robotics dialogue at WRC today.
 
 ### Mr. Bikash Gurung
 - Role: President, Nepal Robotics Association
-- LinkedIn: _pending_
+- LinkedIn: https://www.linkedin.com/in/bikashgurung1990/ (high confidence — "Er. Bikash Gurung", president of Robotics Association of Nepal)
 - Note:
   > Hi Bikash, I'm with Unitree and study electrical engineering at Imperial. I thoroughly enjoyed your insights in the Silk Road robotics dialogue at WRC today.
 
 ### Mr. Jacques Eone
 - Role: President, Cameroon Robotics Association
-- LinkedIn: _pending_
+- LinkedIn: https://www.linkedin.com/in/jacques-e-528206136/ (high confidence — "Jacques E.", Sparte Robotics co-founder, Douala; two other same-name Cameroon profiles exist, check the photo)
 - Note:
   > Hi Jacques, I'm with Unitree and study electrical engineering at Imperial. I thoroughly enjoyed your insights in the Silk Road robotics dialogue at WRC today.
 
